@@ -1,5 +1,16 @@
-const remove = async () => {
-    // Write your code here 
+/** @format */
+
+const fs = require("fs");
+const path = require("path");
+
+const FILE_NAME = "fileToRemove.txt";
+const FOLDER_NAME = "files";
+const ERROR_TEXT = "FS operation failed";
+
+const remove = () => {
+  fs.unlink(path.join(__dirname, FOLDER_NAME, FILE_NAME), (err) => {
+    if (err) throw new Error(ERROR_TEXT);
+  });
 };
 
-await remove();
+remove();
