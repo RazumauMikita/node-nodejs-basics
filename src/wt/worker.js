@@ -1,5 +1,3 @@
-/** @format */
-
 const { workerData, parentPort } = require("node:worker_threads");
 
 const nthFibonacci = (n) =>

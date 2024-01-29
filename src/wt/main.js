@@ -1,5 +1,3 @@
-/** @format */
-
 const { Worker, isMainThread, workerData } = require("node:worker_threads");
 const os = require("os");
 const path = require("path");

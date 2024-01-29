@@ -1,5 +1,3 @@
-/** @format */
-
 const fs = require("fs");
 const { pipeline, Transform } = require("stream");
 

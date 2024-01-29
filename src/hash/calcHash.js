@@ -1,8 +1,7 @@
-/** @format */
-
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+
 const FILE_NAME = "fileToCalculateHashFor.txt";
 const FOLDER_NAME = "files";
 

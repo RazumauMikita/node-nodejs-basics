@@ -1,4 +1,3 @@
-/** @format */
 const fs = require("fs");
 const zlib = require("zlib");
 const { pipeline } = require("stream");

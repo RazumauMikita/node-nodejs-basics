@@ -1,5 +1,3 @@
-/** @format */
-
 const { argv } = require("node:process");
 
 const flag = "--";

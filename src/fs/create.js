@@ -1,4 +1,3 @@
-/** @format */
 const path = require("path");
 const { writeFile } = require("node:fs/promises");
 const { open, close } = require("node:fs");

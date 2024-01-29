@@ -1,4 +1,3 @@
-/** @format */
 const { env } = require("node:process");
 
 const envPrefix = "RSS_";
