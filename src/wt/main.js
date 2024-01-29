@@ -1,4 +1,4 @@
-const { Worker, isMainThread, workerData } = require("node:worker_threads");
+const { Worker, isMainThread } = require("node:worker_threads");
 const os = require("os");
 const path = require("path");
 
@@ -18,8 +18,18 @@ const performCalculations = async () => {
         })
       );
     }
-    results = await Promise.allSettled(workerThreads);
-    console.log(results);
+    const results = await Promise.allSettled(workerThreads);
+    const formattedResults = [];
+
+    results.forEach((result) => {
+      const status = result.status === "fulfilled" ? "resolved" : "error";
+      const data = result.value ? result.value : null;
+      formattedResults.push({
+        status: status,
+        data: data,
+      });
+    });
+    console.log(formattedResults);
   }
 };
 
