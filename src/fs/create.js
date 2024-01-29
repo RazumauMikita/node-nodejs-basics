@@ -10,7 +10,7 @@ const CONTENT_TEXT = "I am fresh and young";
 const ERROR_TEXT = "FS operation failed";
 const ERROR_CODE = "EEXIST";
 
-const create = () => {
+const create = async () => {
   const pathName = path.join(__dirname, FOLDER_NAME, FILE_NAME);
 
   open(pathName, "wx", async (err, fd) => {

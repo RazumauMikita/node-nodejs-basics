@@ -6,7 +6,7 @@ const SRC_FILENAME = "files";
 const COPY_FILENAME = "files_copy";
 const ERROR_TEXT = "FS operation failed";
 
-const copy = () => {
+const copy = async () => {
   fs.readdir(path.join(__dirname, SRC_FILENAME), (err, file) => {
     if (err) throw new Error(ERROR_TEXT);
 

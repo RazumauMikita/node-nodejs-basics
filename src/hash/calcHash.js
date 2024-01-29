@@ -6,7 +6,7 @@ const crypto = require("crypto");
 const FILE_NAME = "fileToCalculateHashFor.txt";
 const FOLDER_NAME = "files";
 
-const calculateHash = () => {
+const calculateHash = async () => {
   const readableStream = fs.createReadStream(
     path.join(__dirname, FOLDER_NAME, FILE_NAME)
   );

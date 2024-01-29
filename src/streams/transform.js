@@ -7,14 +7,14 @@ const input = process.stdin;
 const out = process.stdout;
 
 const transform = async () => {
-  const trans = new Transform({
+  const transformStream = new Transform({
     transform(chunk, en, callback) {
       const chunkStringified = chunk.toString().trim();
       const reversedChunk = chunkStringified.split("").reverse().join("");
       callback(null, reversedChunk + "\n");
     },
   });
-  pipeline(input, trans, out, (err) => {
+  pipeline(input, transformStream, out, (err) => {
     throw err;
   });
 };
